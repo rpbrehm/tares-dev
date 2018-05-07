@@ -1,0 +1,171 @@
+// Charming color variables that are used in the Bootstrap build as well
+// Variables that affect the Bootstrap build should be marked with //BS
+
+// Extended theme color map for more fine grained control over components
+
+// scss-lint:disable ColorVariable
+$theme-colors-extended: () !default;
+
+$theme-colors-extended: map-merge((
+  primary: (
+    color: $primary,
+    border: lighten($primary, 10%),
+    gstart: lighten($primary, 5%),
+    gstop: darken($primary, 5%),
+    highlight: mix($primary, color-yiq($primary), 25%),
+    contrast: color-yiq($primary)
+  ),
+  secondary: (
+    color: $secondary,
+    border: lighten($secondary, 10%),
+    gstart: lighten($secondary, 5%),
+    gstop: darken($secondary, 5%),
+    highlight: mix($secondary, color-yiq($secondary), 25%),
+    contrast: color-yiq($secondary)
+  ),
+  success: (
+    color: $success,
+    border: lighten($success, 10%),
+    gstart: lighten($success, 5%),
+    gstop: darken($success, 5%),
+    highlight: mix($success, color-yiq($success), 25%),
+    contrast: color-yiq($success)
+  ),
+  info: (
+    color: $info,
+    border: lighten($info, 10%),
+    gstart: lighten($info, 5%),
+    gstop: darken($info, 5%),
+    highlight: mix($info, color-yiq($info), 25%),
+    contrast: color-yiq($info)
+  ),
+  warning: (
+    color: $warning,
+    border: lighten($warning, 10%),
+    gstart: lighten($warning, 5%),
+    gstop: darken($warning, 5%),
+    highlight: mix($warning, color-yiq($warning), 25%),
+    contrast: color-yiq($warning)
+  ),
+  danger: (
+    color: $danger,
+    border: lighten($danger, 10%),
+    gstart: lighten($danger, 5%),
+    gstop: darken($danger, 5%),
+    highlight: mix($danger, color-yiq($danger), 25%),
+    contrast: color-yiq($danger)
+  ),
+  dark: (
+    color: $dark,
+    border: lighten($dark, 10%),
+    gstart: lighten($dark, 5%),
+    gstop: darken($dark, 5%),
+    highlight: mix($dark, color-yiq($dark), 25%),
+    contrast: color-yiq($dark)
+  ),
+  light: (
+    color: $light,
+    border: darken($light, 10%),
+    gstart: lighten($light, 5%),
+    gstop: darken($light, 5%),
+    highlight: mix($light, color-yiq($light), 25%),
+    contrast: color-yiq($light)
+  ),
+  accent-1: (
+    color: $accent-1,
+    border: lighten($accent-1, 10%),
+    gstart: lighten($accent-1, 5%),
+    gstop: darken($accent-1, 5%),
+    highlight: mix($accent-1, color-yiq($accent-1), 25%),
+    contrast: color-yiq($accent-1)
+  ),
+  accent-2: (
+    color: $accent-2,
+    border: lighten($accent-2, 10%),
+    gstart: lighten($accent-2, 5%),
+    gstop: darken($accent-2, 5%),
+    highlight: mix($accent-2, color-yiq($accent-2), 25%),
+    contrast: color-yiq($accent-2)
+  ),
+), $theme-colors-extended);
+
+// Dashboard background gradient (for boxed layout)
+$dash-bg-gradient-start: #c2cad1;
+$dash-bg-gradient-stop: #8e9eab;
+
+// Navigation
+$web-nav-header-shadow-color: rgba(0, 0, 0, .05) !default;
+$web-nav-top-hover-color: rgba(0, 0, 0, .06) !default;
+$web-nav-light-top-hover-color: rgba(255, 255, 255, .1) !default;
+$web-nav-chevron-color: #c5c5c5 !default;
+$web-nav-dropdown-menu-shadow-color: rgba(0, 0, 0, .3) !default;
+$web-nav-list-mobile-shadow-color: rgba(0, 0, 0, .11) !default;
+$web-nav-item-hover-color: #f0f0f4 !default;
+
+// Blocks
+$block-bg-gstart: #fff !default;
+$block-bg-gstop: #f6f6f6 !default;
+$block-border: #cbcdd9 !default;
+
+//$block-dark-text: $dark-contrast !default;
+//$block-dark-gstart: $dark-gstart !default;
+//$block-dark-gstop: $dark-gstop !default;
+
+$block-callout-bg: rgba(157, 162, 186, .5) !default;
+
+// Boxes
+$box-text: $body-color;
+$box-border: #c8c8c8 !default;
+$box-bg: #fafafa !default;
+$box-footer-bg: #f8f8f8 !default;
+$box-block-codesample-text: #fff;
+$box-block-codesample-bg: #2e2e2e;
+
+// Balloons
+$balloon-author-photo-text: #a2a2a2 !default;
+$balloon-author-photo-shadow: (255, 255, 255, .47) !default;
+
+// Blog
+$blog-header-small-text: #fff !default;
+$blog-header-huge-text: #a4a9bc !default;
+
+// Dashboard
+$dash-primary-bg: #353844 !default;
+$dash-primary-text: #d8d9dd !default;
+$dash-primary-bg-engraving-border: #2d303a !default;
+$dash-primary-bg-engraving-shadow: #454851 !default;
+
+$dash-toolbar-bg: $dash-primary-bg !default;
+$dash-toolbar-text: $dash-primary-text !default;
+
+$dash-toolbar-search-bg: darken($dash-primary-bg, 2%) !default;
+$dash-toolbar-search-shadow: rgba(0, 0, 0, .26) !default;
+$dash-toolbar-search-text: #b9becc !default;
+
+$dash-titlebar-bg: #fff !default;
+$dash-titlebar-text: $body-color !default;
+$dash-titlebar-border: $box-border !default;
+
+$dash-nav-chevron-color: #c5c5c5;
+$dash-nav-item-text: $dash-primary-text !default;
+$dash-nav-item-icon: get-color("accent-1", color) !default;
+$dash-nav-item-icon-shadow: rgba(0, 0, 0, .34) !default;
+
+$dash-nav-item-active-bg: #2e323a !default;
+$dash-nav-item-active-bg-shadow: darken($dash-nav-item-active-bg, 1%) !default;
+$dash-nav-item-active-border: get-color("accent-1", color) !default;
+$dash-nav-mobile-shadow: rgba(0, 0, 0, .28) !default;
+$dash-nav-controller-bg: rgba(255, 255, 255, .1) !default;
+$dash-nav-tools-border: $dash-primary-bg-engraving-border !default;
+$dash-nav-toggler-border: rgba(255, 255, 255, .1) !default;
+
+$dash-app-bg: $block-bg-gstop !default;
+
+// Pricing tables
+$pct-border: #c8c8c8 !default;
+$pct-bg-gradient-start: #f9f9f9 !default;
+$pct-bg-gradient-stop: #f2f2f2 !default;
+$pct-list-bullet: #d0d5d9 !default;
+$pct-box-shadow: rgba(0, 0, 0, .02) !default;
+
+// scss-lint:enable ColorVariable

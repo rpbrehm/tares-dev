@@ -1,0 +1,23 @@
+// Charming variables that are also used in the custom-version of Bootstrap
+// Variables that affect the Bootstrap build should be marked with //BS
+
+// Block
+$block-padding:              $spacer * 1.5 !default; // 24px
+
+// Navbar
+$navbar-padding-y:                  .875rem !default; //14px
+
+// Forms
+$form-group-margin-bottom:       $spacer !default;
+
+// These don't seem to be used in Bootstrap actually
+//$input-height-inner-lg:         70px !default;
+//$input-height-lg:               90px !default;
+
+// Navigation breakpoint for web-nav
+$web-nav-mobile-breakpoint-up: 992px;
+$web-nav-mobile-breakpoint-down: $web-nav-mobile-breakpoint-up - 1;
+
+// Dash sidebar width
+$dash-nav-width: 206px;
+

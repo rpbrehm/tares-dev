@@ -1,0 +1,27 @@
+// Charming Theme as a foundation (includes Bootstrap)
+@import  '../modules/theme-machine/themes/charming/css/bootstrap4-charming';
+
+/*******************
+Charming PRO
+*******************/
+
+@import 'colors';
+@import 'variables';
+
+// Code highlighting
+@import 'pygments';
+
+// Rest of Charming
+
+@import 'blocks';
+@import 'boxes';
+@import 'blog';
+@import 'dashboard';
+@import 'merits';
+@import 'misc';
+@import 'footer';
+@import 'navigation';
+@import 'pricing-tables';
+@import 'balloons';
+@import 'tables';
+@import 'utilities';

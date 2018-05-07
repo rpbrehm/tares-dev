@@ -1,0 +1,24 @@
+@each $name, $colors in $theme-colors-extended {
+  .bg-gradient-#{$name} {
+    @include bg-gradient(
+        map-get($colors, gstart),
+        map-get($colors, gstop)
+    );
+  }
+}
+
+// scss-lint:disable ImportantRule
+@each $name, $color in $theme-colors {
+  .tbg-#{$name} {
+    background-color: rgba($color, .65) !important;
+  }
+}
+
+$text-reduced-mix-color: #fff;
+
+@each $name, $color in $theme-colors {
+  .text-reduced-#{$name} {
+    color: mix($color, $text-reduced-mix-color, 35%) !important;
+  }
+}
+// scss-lint:enable ImportantRule

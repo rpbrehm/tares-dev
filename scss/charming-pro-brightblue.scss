@@ -1,0 +1,21 @@
+// Variable locations:
+// -------------------
+// _variables.scss
+// _colors.scss
+// /modules/theme-machine/themes/charming/css/_variables.scss
+// /modules/theme-machine/themes/charming/css/_colors.scss
+// /modules/theme-machine/node_modules/bootstrap/scss/_variables.scss
+
+$accent-1: #E74C3C !default; //1
+$accent-2: #2C3E50 !default; //2
+
+$primary: #3498DB !default; //4
+$secondary: #2980B9 !default; //5
+$success: #1CA336 !default; //
+$info: #8DCCF5 !default; //4
+$warning: #F59F3F !default; //
+$danger: #DC210D !default; //
+$light: #ECF0F1 !default; //3
+$dark: #161F27 !default; //
+
+@import 'charming-pro';

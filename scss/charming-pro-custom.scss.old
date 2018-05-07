@@ -1,0 +1,19 @@
+// This is a simple example of a customized version of Charming Pro.
+// Make your own copy of this file and adjust variables as you wish. Then run the build.
+
+// Variable locations:
+// -------------------
+// _variables.scss
+// _colors.scss
+// /modules/theme-machine/themes/charming/css/_variables.scss
+// /modules/theme-machine/themes/charming/css/_colors.scss
+// /modules/theme-machine/node_modules/bootstrap/scss/_variables.scss
+
+// Do not adjust variables in those files. Instead copy them into this file.
+
+// Example variables
+//$border-radius: 0;
+//$accent-1: #c3487d;
+//$accent-2: #2c375c;
+
+@import 'charming-pro';

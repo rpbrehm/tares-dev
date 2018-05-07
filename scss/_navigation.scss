@@ -1,0 +1,356 @@
+// Navigation
+
+.web-nav {
+  @media (min-width: $web-nav-mobile-breakpoint-up) {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    min-height: 70px;
+  }
+
+  @media (max-width: $web-nav-mobile-breakpoint-down) {
+    display: block;
+    min-height: 96px;
+
+    header {
+      align-items: center;
+      background: $body-bg;
+      box-shadow: 0 2px 7px 4px $web-nav-header-shadow-color;
+      display: flex;
+      justify-content: flex-start;
+      left: 0;
+      min-height: 96px;
+      padding: 0 24px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 1030;
+    }
+
+    &.show {
+      background: $accent-2;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 1030;
+
+      header {
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.web-nav-toggler {
+  margin-left: auto;
+  padding: 20px 0 20px 20px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .fa {
+    font-size: 30px;
+
+    @media (max-width: 350px) {
+      font-size: 20px;
+    }
+  }
+
+  .fa-close { display: none; }
+
+  &.open {
+    .fa-bars { display: none; }
+    .fa-close { display: block; }
+  }
+
+  @media (min-width: $web-nav-mobile-breakpoint-up) {
+    display: none;
+  }
+}
+
+
+// scss-lint:disable SelectorDepth
+.web-nav-list {
+  display: flex;
+
+  @media (max-width: $web-nav-mobile-breakpoint-down) {
+    background: $body-bg;
+    box-shadow: 0 0 10px 0 $web-nav-list-mobile-shadow-color;
+    display: none;
+    flex-flow: column nowrap;
+    margin: 24px;
+
+    &.show {
+      display: flex;
+    }
+
+    .web-nav.show & {
+      display: flex;
+    }
+
+    > .web-nav-dropdown {
+      border-left: 4px solid transparent;
+
+      &.show {
+        border-color: $accent-1;
+      }
+    }
+
+    > .web-nav-item {
+      border-left: 4px solid transparent;
+    }
+  }
+
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  // only top nav items
+  > .web-nav-item,
+  > .web-nav-dropdown > .web-nav-item {
+    position: relative;
+
+    @media (min-width: $web-nav-mobile-breakpoint-up){
+      padding: 23px 10px;
+
+      .fa.fa-chevron-right {
+        transform: rotate(90deg);
+      }
+
+
+      &:hover {
+        background: $web-nav-top-hover-color;
+
+        .web-nav-light & {
+          @media (min-width: $web-nav-mobile-breakpoint-up) {
+            background: $web-nav-light-top-hover-color;
+          }
+        }
+      }
+
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  .web-nav-dropdown.show > .web-nav-item {
+    background: $web-nav-top-hover-color;
+  }
+
+  > .web-nav-dropdown.show > .web-nav-item {
+    .web-nav-light & {
+      @media (min-width: $web-nav-mobile-breakpoint-up) {
+        background: $web-nav-light-top-hover-color;
+      }
+    }
+  }
+}
+
+.web-nav-item {
+  padding: 16px 24px;
+
+  @media (min-width: $web-nav-mobile-breakpoint-up) {
+    padding: 12px 24px;
+
+    &:hover {
+      background: $web-nav-item-hover-color;
+    }
+  }
+
+  // inside dropdown menu on level 1+
+  .web-nav-dropdown-menu & {
+    border-left: 4px solid transparent;
+    white-space: nowrap;
+
+    &.active {
+      font-weight: bold;
+    }
+
+    &:hover {
+      @media (min-width: $web-nav-mobile-breakpoint-up) {
+        border-color: $accent-1;
+      }
+    }
+
+    @media (min-width: $web-nav-mobile-breakpoint-up) {
+      .fa {
+        margin-left: 20px;
+        margin-right: -10px;
+      }
+    }
+
+    @media (max-width: $web-nav-mobile-breakpoint-down) {
+      position: relative;
+    }
+  }
+
+  @media (max-width: $web-nav-mobile-breakpoint-down) {
+    .web-nav-dropdown-menu & {
+      padding-left: 32px;
+    }
+
+    .web-nav-dropdown-menu .web-nav-dropdown-menu & {
+      padding-left: 48px;
+    }
+
+    .web-nav-dropdown-menu .web-nav-dropdown-menu .web-nav-dropdown-menu & {
+      padding-left: 64px;
+    }
+
+    .web-nav-dropdown-menu .web-nav-dropdown-menu .web-nav-dropdown-menu .web-nav-dropdown-menu & {
+      padding-left: 80px;
+    }
+  }
+}
+// scss-lint:enable SelectorDepth
+
+.web-nav-dropdown {
+  &.show {
+    > .web-nav-dropdown-menu {
+      display: flex;
+    }
+
+    > .web-nav-dropdown-toggle {
+      @media (max-width: $web-nav-mobile-breakpoint-down){
+        .fa.fa-chevron-right {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+.web-nav-dropdown-toggle {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .fa {
+    color: $web-nav-chevron-color;
+    font-size: 11px;
+    margin-left: 8px;
+  }
+
+  .web-nav-dropdown .web-nav-dropdown & {
+    display: flex;
+  }
+}
+
+.web-nav-dropdown-menu {
+  display: none;
+  flex-flow: column nowrap;
+  z-index: 1030;
+
+  @media (min-width: $web-nav-mobile-breakpoint-up) {
+    background: $body-bg;
+    box-shadow: 0 2px 5px 0 $web-nav-dropdown-menu-shadow-color;
+    position: absolute;
+  }
+}
+
+
+@mixin web-nav-highlight-variant($color) {
+  .web-nav-list {
+    > .web-nav-dropdown {
+      &.show {
+        border-color: $color;
+      }
+    }
+  }
+
+  .web-nav-dropdown-menu {
+    .web-nav-item {
+      // inside dropdown menu on level 1+
+      &:hover {
+        @media (min-width: $web-nav-mobile-breakpoint-up) {
+          border-color: $color;
+        }
+      }
+    }
+  }
+
+  .web-nav-toggler {
+    color: $color;
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .web-nav-highlight-#{$name} {
+    @include web-nav-highlight-variant($color)
+  }
+
+}
+
+
+// scss-lint:disable SelectorDepth
+@media (min-width: $web-nav-mobile-breakpoint-up) {
+  .web-nav-light {
+    .web-nav-list > .web-nav-item,
+    .web-nav-list > .web-nav-dropdown > .web-nav-item {
+      color: $light;
+    }
+  }
+}
+
+// A text based logo with a font-awesome icon
+.charming-logo {
+  color: $body-color;
+  display: block;
+  font-size: 1.5625rem;
+  font-weight: bold;
+  line-height: $line-height-lg;
+
+  .web-nav-light & {
+    @media (min-width: $web-nav-mobile-breakpoint-up) {
+      color: $light;
+
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+
+  .charming-logo-icon {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 1.25rem;
+
+    .charming-logo-icon {
+      font-size: 20px;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $body-color;
+    text-decoration: none;
+  }
+}
+
+// scss-lint:disable IdSelector
+#web-nav-mobile-indicator {
+  // this signals to the javascript if the navigation is mobile or not
+  display: none;
+
+  @media (max-width: $web-nav-mobile-breakpoint-down) {
+    display: block;
+  }
+}
+// scss-lint:enable IdSelector

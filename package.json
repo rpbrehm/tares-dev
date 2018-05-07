@@ -1,21 +1,39 @@
 {
-  "name": "confusion",
+  "name": "tares",
   "version": "1.0.0",
-  "description": "This is a website for Ristorante Con Fusion",
+  "description": "TARES web site",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
-  "author": "",
+  "author": "rpbrehm",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "autoprefixer": "^8.2.0",
+    "bootstrap": "4.1.0",
+    "del": "*",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "*",
+    "gulp-header": "^2.0.5",
+    "gulp-htmllint": "0.0.15",
+    "gulp-jshint": "^2.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "*",
+    "gulp-sass": "^4.0.1",
+    "gulp-scss-lint": "^0.6.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-wait": "*",
+    "jshint": "*",
+    "jshint-stylish": "*",
+    "merge-stream": "*"
   }
 }
