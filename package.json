@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.2.0",
-    "bootstrap": "4.1.0",
+    "bootstrap": "4.3.1",
     "del": "*",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.3",
